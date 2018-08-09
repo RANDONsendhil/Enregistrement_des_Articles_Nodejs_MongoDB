@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Formulaire Article</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+
+
+    </script>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="control.js">
+
+
+    </script>
+</head>
+
+<div class="container">
+       
+    <body ng-app="myApp" ng-controller="myContr">
+         <div> 
+				<%= title %>
+
+			</div>   
+
+
+        <a ng-click="message('page')">MENU</a>
+
+        <div ng-show="showitem{{page}}"> 
+        
+  
+        <a ng-click="pageHtml()"> CREER UN ARTICLE  </a> 
+            
+        <div ng-show="showPage"  ng-include="'formularieArticle.ejs'"></div>
+ 
+ 
+ 
+
+        
+        
+      
+        <a ng-click="pageHtmldel()"> Supprimer un Article  </a> 
+            
+        <div ng-show="showPagedel"  ng-include="'delete.ejs'" > </div>
+ 
+        
+        
+
+</div>
+
+        <br/><br/><br/>
+
+
+    </body>
+</div>
+
+</html>

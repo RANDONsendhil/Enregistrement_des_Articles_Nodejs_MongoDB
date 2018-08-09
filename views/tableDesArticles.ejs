@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tables Des Articles</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+
+<body ng-app="myApp" ng-controller="myContr">
+    <div class="container">
+        <div>
+            <%= title %>
+
+        </div>
+
+        <br>
+
+
+        <div class="spacer">
+            Search data: <input type="text" ng-model="searchData " placeholder="Search data.." /> <br> <br/>
+            Search by code: <input type="text" ng-model="searchData.Code" placeholder="Search by code..."><br/>
+            Equality <input type="checkbox" ng-model= "strict"><br/> <br/>
+            <table>
+                <thead>
+ 
+                    <tr>
+                        <th>ID</th>
+                        <th>CODE</th>
+                        <th>DESIGNATION</th>
+                        <th>PRIX</th>
+
+                    </tr>
+                    <tr ng-repeat=" data in dataArticles | filter:searchData:strict">
+
+                        <th>{{data._id}}</th>
+                        <th> {{data.Code}}</th>
+                        <th> {{data.Designation}}</th>
+                        <th> {{data.prix}}</th>
+
+
+                    </tr>
+
+
+                </thead>
+
+            </table>
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular-sanitize.min.js"></script>
+    <script type="text/javascript" src="control.js"></script>
+</body>
+
+
+</html>

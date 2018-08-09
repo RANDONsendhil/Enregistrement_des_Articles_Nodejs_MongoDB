@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulaire Article</title>
+
+</head>
+	<body>
+		<p> Suppression des Articles</p>
+
+		<form method="GET" action="/supprimerUnArticle"> 
+			<ul>
+				<p>		Code:  <input type="text" name="codeArticle"></p>
+				<p>Designation:  <input type="text" name="Designation"></p>
+					 
+				<p><button type="submit">Supprimer </button></p>
+
+
+			</ul>
+		</form>	
+
+			<div> 
+				<%= title %>
+
+			</div>
+
+			<br/><br/><br/>
+			<p><a href="/TablesDesArticles">Afficher les tables de Tables Des Articles</p>
+	</body>
+</html>

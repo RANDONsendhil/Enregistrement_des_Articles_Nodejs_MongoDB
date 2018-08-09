@@ -1,0 +1,27 @@
+body{
+
+background-color:skyblue;
+font-family:sans-serif;
+}
+
+a{  color:  firebrick;
+    cursor: pointer;
+    font: bold;
+ 
+}
+
+table{
+  border-collapse: collapse;
+}
+
+th{
+    
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.spacer{
+    
+    margin-top: 20px; 
+    
+}
